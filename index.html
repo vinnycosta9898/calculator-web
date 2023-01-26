@@ -4,51 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
     <script src="https://unpkg.com/phosphor-icons"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Calculadora</title>
 </head>
 <body>
     <div class="container">
         <div class="calculator">
-            <p class="result" id="result">vtvtv</p>
+            <p class="result" id="result"></p>
 
             <table>
                 <tr>
-                    <td><button class="button ac" style="width: 106px">AC</button></td>
-                    <td><button class="button backspace"><i class="ph-backspace"></i></button></td>
-                    <td><button class="button special"><i class="ph-divide"></i></button></td>
+                    <td><button class="button ac" style="width: 106px" onclick=" handleClean()">AC</button></td>
+                    <td><button class="button backspace" onclick=" handleBackSpace()"><i class="p h-backspace"></i></button></td>
+                    <td><button class="button special" onclick=" handleInsert('/')"><i class="p h-divide"></i></button></td>
                 </tr>
 
                 <tr>
-                    <td><button class="button">7</button></td>
-                    <td><button class="button">8</button></td>
-                    <td><button class="button">9</button></td>
-                    <td><button class="button special">X</button></td>
+                    <td><button class="button" onclick=" handleInsert('7')">7</button></td>
+                    <td><button class="button" onclick=" handleInsert('8')">8</button></td>
+                    <td><button class="button" onclick=" handleInsert('9')">9</button></td>
+                    <td><button class="button special" onclick=" handleInsert('*')">x</button></td>
                 </tr>
 
                 <tr>
-                    <td><button class="button">4</button></td>
-                    <td><button class="button">5</button></td>
-                    <td><button class="button">6</button></td>
-                    <td><button class="button special">-</button></td>
+                    <td><button class="button" onclick=" handleInsert('4')">4</button></td>
+                    <td><button class="button" onclick=" handleInsert('5')">5</button></td>
+                    <td><button class="button" onclick=" handleInsert('6')">6</button></td>
+                    <td><button class="button special" onclick=" handleInsert('-')">-</button></td>
                 </tr>
 
                 <tr>
-                    <td><button class="button">1</button></td>
-                    <td><button class="button">2</button></td>
-                    <td><button class="button">3</button></td>
-                    <td><button class="button special">+</button></td>
+                    <td><button class="button" onclick=" handleInsert('1')">1</button></td>
+                    <td><button class="button" onclick=" handleInsert('2')">2</button></td>
+                    <td><button class="button" onclick=" handleInsert('3')">3</button></td>
+                    <td><button class="button special" onclick=" handleInsert('+')">+</button></td>
                 </tr>
 
                 <tr>
-                    <td><button class="button">0</button></td>
-                    <td><button class="button">.</button></td>
-                    <td><button class="button equal" style="width: 106px">=</button></td>
+                    <td><button class="button" onclick=" handleInsert('0')">0</button></td>
+                    <td><button class="button" onclick=" handleInsert('.')">.</button></td>
+                    <td><button class="button equal" onclick=" handleConfirm()" style="width: 106px">=</button></td>
                 </tr>
             </table>
         </div>
     </div>
-    
+    <script src="./script.js"></script>
 </body>
 </html>
